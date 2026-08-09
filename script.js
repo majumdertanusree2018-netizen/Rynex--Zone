@@ -1193,4 +1193,372 @@ function showSpeedQuestion() {
 
 
     const container =
+    document.getElementById(
+            "speedAnswerContainer"
+        );
+
+
+    container.innerHTML = "";
+
+
+    document.getElementById(
+        "speedNextButton"
+    ).style.display =
+        "none";
+
+
+    current.options.forEach(
+        function(option) {
+
+            const button =
+                document.createElement(
+                    "button"
+                );
+
+
+            button.className =
+                "answer-btn";
+
+            button.type =
+                "button";
+
+            button.innerText =
+                option;
+
+
+            button.onclick =
+                function() {
+
+                    checkSpeedAnswer(
+                        option,
+                        button
+                    );
+
+                };
+
+
+            container.appendChild(
+                button
+            );
+
+        }
+    );
+
+
+    startSpeedTimer();
+}
+
+
+// ========================================
+// SPEED TIMER ⏱️
+// ========================================
+
+function startSpeedTimer() {
+
+    speedTime = 10;
+
+
+    const timer =
+        document.getElementById(
+            "speedTimer"
+        );
+
+
+    timer.innerText =
+        "⏱️ " +
+        speedTime;
+
+
+    speedTimerInterval =
+        setInterval(
+            function() {
+
+                speedTime--;
+
+
+                timer.innerText =
+                    "⏱️ " +
+                    speedTime;
+
+
+                if (speedTime <= 0) {
+
+                    clearInterval(
+                        speedTimerInterval
+                    );
+
+
+                    disableSpeedAnswers();
+
+
+                    document.getElementById(
+                        "speedNextButton"
+                    ).style.display =
+                        "block";
+
+                }
+
+            },
+            1000
+        );
+}
+
+
+// ========================================
+// CHECK SPEED ANSWER
+// ========================================
+
+function checkSpeedAnswer(
+    selectedAnswer,
+    selectedButton
+) {
+
+    clearInterval(
+        speedTimerInterval
+    );
+
+
+    const current =
+        speedQuestions[
+            speedQuestionIndex
+        ];
+
+
+    disableSpeedAnswers();
+
+
+    if (
+        selectedAnswer ===
+        current.answer
+    ) {
+
+        speedScore++;
+
+
+        selectedButton.classList.add(
+            "correct-answer"
+        );
+
+    }
+
+    else {
+
+        selectedButton.classList.add(
+            "wrong-answer"
+        );
+
+
+        const buttons =
+            document.querySelectorAll(
+                "#speedAnswerContainer .answer-btn"
+            );
+
+
+        buttons.forEach(
+            function(button) {
+
+                if (
+                    button.innerText ===
+                    current.answer
+                ) {
+
+                    button.classList.add(
+                        "correct-answer"
+                    );
+
+                }
+
+            }
+        );
+
+    }
+
+
+    document.getElementById(
+        "speedScore"
+    ).innerText =
+        "SCORE: " +
+        speedScore;
+
+
+    document.getElementById(
+        "speedNextButton"
+    ).style.display =
+        "block";
+}
+
+
+// ========================================
+// DISABLE SPEED ANSWERS
+// ========================================
+
+function disableSpeedAnswers() {
+
+    const buttons =
+        document.querySelectorAll(
+            "#speedAnswerContainer .answer-btn"
+        );
+
+
+    buttons.forEach(
+        function(button) {
+
+            button.disabled = true;
+
+        }
+    );
+
+}
+
+
+// ========================================
+// NEXT SPEED QUESTION
+// ========================================
+
+function nextSpeedQuestion() {
+
+    speedQuestionIndex++;
+
+    showSpeedQuestion();
+
+}
+
+
+// ========================================
+// FINISH SPEED GAME 🏆
+// ========================================
+
+function finishSpeedGame() {
+
+    clearInterval(
+        speedTimerInterval
+    );
+
+
+    hideAllScreens();
+
+
+    document.getElementById(
+        "resultScreen"
+    ).style.display =
+        "flex";
+
+
+    document.getElementById(
+        "finalScore"
+    ).innerText =
+        speedScore +
+        " / " +
+        speedQuestions.length;
+
+
+    const message =
+        document.getElementById(
+            "resultMessage"
+        );
+
+
+    if (
+        speedScore ===
+        speedQuestions.length
+    ) {
+
+        message.innerText =
+            "🏆 YOU WON! Lightning Champion! ⚡";
+
+
+        createWinnerEffect();
+
+    }
+
+    else if (
+        speedScore >=
+        Math.ceil(
+            speedQuestions.length / 2
+        )
+    ) {
+
+        message.innerText =
+            "⚡ Amazing speed! Great job!";
+
+    }
+
+    else {
+
+        message.innerText =
+            "💪 Keep practicing and try again!";
+
+    }
+
+}
+
+
+// ========================================
+// MEMORY MATCH 🧩
+// ========================================
+
+function startMemoryMatch() {
+
+    alert(
+        "🧩 MEMORY MATCH\n\n" +
+        "This game is coming next! 🚀"
+    );
+
+}
+
+
+// ========================================
+// MATH RUSH 🔢
+// ========================================
+
+function startMathRush() {
+
+    alert(
+        "🔢 MATH RUSH\n\n" +
+        "This game is coming next! 🚀"
+    );
+
+}
+
+
+// ========================================
+// BOSS CHALLENGE 👑
+// ========================================
+
+function startBossChallenge() {
+
+    alert(
+        "👑 BOSS CHALLENGE\n\n" +
+        "This game is coming next! 🚀"
+    );
+
+}
+
+
+// ========================================
+// INITIAL SCREEN
+// ========================================
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        hideAllScreens();
+
+
+        const opening =
+            document.getElementById(
+                "openingScreen"
+            );
+
+
+        if (opening) {
+
+            opening.style.display =
+                "flex";
+
+        }
+
+    }
+    );
     
