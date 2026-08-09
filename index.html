@@ -1,1 +1,924 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 
+<meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color"
+    content="#050712">
+
+<!-- SEO DESCRIPTION -->
+<meta name="description"
+    content="RYNEX ZONE is a fun educational gaming website for students and everyone. Play quizzes, speed challenges, memory games, math challenges and more.">
+
+<meta name="keywords"
+    content="RYNEX ZONE, educational games, student games, quiz game, learning games, math games, online quiz, school games">
+
+<meta name="author"
+    content="Rajdeep">
+
+<!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
+<meta name="google-site-verification"
+    content="B7VHljB0Q04klR6yN0LE26Eb8yDwjFjD-YXID6t128s">
+
+<!-- OPEN GRAPH -->
+<meta property="og:title"
+    content="RYNEX ZONE 🎮 | Play • Learn • Challenge • Have Fun">
+
+<meta property="og:description"
+    content="Play, learn and challenge yourself with RYNEX ZONE — a fun gaming world for students and everyone.">
+
+<meta property="og:type"
+    content="website">
+
+<meta property="og:url"
+    content="https://majumdertanusree2018-netizen.github.io/Rynex--Zone/">
+
+<title>
+    RYNEX ZONE 🎮 | Play • Learn • Challenge • Have Fun
+</title>
+
+<link rel="canonical"
+    href="https://majumdertanusree2018-netizen.github.io/Rynex--Zone/">
+
+<link rel="stylesheet"
+    href="style.css">
+
+</head><body><!-- =====================================
+     01. OPENING SCREEN
+====================================== -->
+
+<main id="openingScreen"
+    class="welcome-screen">
+
+    <div class="logo-icon">
+        🎮
+    </div>
+
+    <h1>
+        RYNEX ZONE
+    </h1>
+
+    <p class="tagline">
+        Play • Learn • Challenge • Have Fun
+    </p>
+
+    <h2>
+        Welcome, Champions! 👋
+    </h2>
+
+    <p class="description">
+        RYNEX ZONE is a fun gaming world
+        specially designed for students,
+        college players and everyone who
+        loves challenges.
+    </p>
+
+    <button
+        class="start-btn"
+        onclick="startGame()"
+        type="button">
+
+        🚀 START PLAYING
+
+    </button>
+
+    <p class="creator">
+        Created by
+        <strong>Rajdeep</strong> ✨
+    </p>
+
+</main>
+
+
+<!-- =====================================
+     02. HOME SCREEN
+====================================== -->
+
+<section id="homeScreen"
+    class="home-screen">
+
+    <div class="home-header">
+
+        <div class="small-logo">
+            🎮
+        </div>
+
+        <h2>
+            RYNEX ZONE
+        </h2>
+
+        <p>
+            Choose your adventure!
+        </p>
+
+    </div>
+
+
+    <div class="mode-container">
+
+        <div class="mode-card"
+            onclick="studentMode()">
+
+            <div class="mode-icon">
+                🎓
+            </div>
+
+            <h3>
+                Student Mode
+            </h3>
+
+            <p>
+                School • College • University
+            </p>
+
+        </div>
+
+
+        <div class="mode-card"
+            onclick="funMode()">
+
+            <div class="mode-icon">
+                🤣
+            </div>
+
+            <h3>
+                Fun Mode
+            </h3>
+
+            <p>
+                Everyone Welcome
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <p class="creator">
+        Created by
+        <strong>Rajdeep</strong> ✨
+    </p>
+
+</section>
+
+
+<!-- =====================================
+     03. PLAYER TYPE SELECTION
+====================================== -->
+
+<section id="playerTypeScreen"
+    class="player-type-screen">
+
+    <div class="player-type-header">
+
+        <div class="small-logo">
+            🎮
+        </div>
+
+        <h2>
+            WHO ARE YOU? 👋
+        </h2>
+
+        <p>
+            Choose your gaming experience
+            and start your adventure 🚀
+        </p>
+
+    </div>
+
+
+    <div class="player-type-grid">
+
+        <div class="player-type-card"
+            onclick="selectPlayerType('school')">
+
+            <div class="player-type-icon">
+                🎒
+            </div>
+
+            <span>
+                PLAYER 01
+            </span>
+
+            <h3>
+                School
+            </h3>
+
+            <p>
+                Class 1–12
+            </p>
+
+            <button type="button">
+                ENTER 🎮
+            </button>
+
+        </div>
+
+
+        <div class="player-type-card"
+            onclick="selectPlayerType('college')">
+
+            <div class="player-type-icon">
+                🎓
+            </div>
+
+            <span>
+                PLAYER 02
+            </span>
+
+            <h3>
+                College
+            </h3>
+
+            <p>
+                College & University
+            </p>
+
+            <button type="button">
+                ENTER 🎮
+            </button>
+
+        </div>
+
+
+        <div class="player-type-card"
+            onclick="selectPlayerType('general')">
+
+            <div class="player-type-icon">
+                🌍
+            </div>
+
+            <span>
+                PLAYER 03
+            </span>
+
+            <h3>
+                General
+            </h3>
+
+            <p>
+                Open for Everyone
+            </p>
+
+            <button type="button">
+                ENTER 🎮
+            </button>
+
+        </div>
+
+
+        <div class="player-type-card"
+            onclick="selectPlayerType('fun')">
+
+            <div class="player-type-icon">
+                🤣
+            </div>
+
+            <span>
+                PLAYER 04
+            </span>
+
+            <h3>
+                Fun Mode
+            </h3>
+
+            <p>
+                Just Play & Have Fun
+            </p>
+
+            <button type="button">
+                ENTER 🎮
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <p class="class-footer">
+        RYNEX ZONE 🎮 • Created by Rajdeep ✨
+    </p>
+
+</section>
+
+
+<!-- =====================================
+     04. CLASS SELECTION
+====================================== -->
+
+<section id="classScreen"
+    class="class-screen">
+
+    <div class="class-header">
+
+        <div class="small-logo">
+            🎓
+        </div>
+
+        <h2>
+            CHOOSE YOUR CLASS
+        </h2>
+
+        <p>
+            Select your class to begin
+            your learning adventure 🚀
+        </p>
+
+    </div>
+
+
+    <div class="class-grid">
+
+        <div class="class-card" onclick="selectClass(1)">
+            <span>01</span>
+            <h3>Class 1</h3>
+        </div>
+
+        <div class="class-card" onclick="selectClass(2)">
+            <span>02</span>
+            <h3>Class 2</h3>
+        </div>
+
+        <div class="class-card" onclick="selectClass(3)">
+            <span>03</span>
+            <h3>Class 3</h3>
+        </div>
+
+        <div class="class-card" onclick="selectClass(4)">
+            <span>04</span>
+            <h3>Class 4</h3>
+        </div>
+
+        <div class="class-card" onclick="selectClass(5)">
+            <span>05</span>
+            <h3>Class 5</h3>
+        </div>
+
+        <div class="class-card" onclick="selectClass(6)">
+            <span>06</span>
+            <h3>Class 6</h3>
+        </div>
+
+        <div class="class-card" onclick="selectClass(7)">
+            <span>07</span>
+            <h3>Class 7</h3>
+        </div>
+
+        <div class="class-card" onclick="selectClass(8)">
+            <span>08</span>
+            <h3>Class 8</h3>
+        </div>
+
+        <div class="class-card" onclick="selectClass(9)">
+            <span>09</span>
+            <h3>Class 9</h3>
+        </div>
+
+        <div class="class-card" onclick="selectClass(10)">
+            <span>10</span>
+            <h3>Class 10</h3>
+        </div>
+
+        <div class="class-card" onclick="selectClass(11)">
+            <span>11</span>
+            <h3>Class 11</h3>
+        </div>
+
+        <div class="class-card" onclick="selectClass(12)">
+            <span>12</span>
+            <h3>Class 12</h3>
+        </div>
+
+    </div>
+
+
+    <p class="class-footer">
+        RYNEX ZONE 🎮 • Created by Rajdeep ✨
+    </p>
+
+</section>
+
+
+<!-- =====================================
+     05. SUBJECT SELECTION
+====================================== -->
+
+<section id="subjectScreen"
+    class="subject-screen">
+
+    <div class="subject-header">
+
+        <div class="small-logo">
+            📚
+        </div>
+
+        <h2 id="selectedClassTitle">
+            CHOOSE YOUR SUBJECT
+        </h2>
+
+        <p>
+            Pick a subject and start
+            your challenge 🚀
+        </p>
+
+    </div>
+
+
+    <div class="subject-grid">
+
+        <div class="subject-card"
+            onclick="selectSubject('Mathematics')">
+
+            <div>🔢</div>
+
+            <h3>
+                Mathematics
+            </h3>
+
+            <p>
+                Think • Solve • Win
+            </p>
+
+        </div>
+
+
+        <div class="subject-card"
+            onclick="selectSubject('Science')">
+
+            <div>🔬</div>
+
+            <h3>
+                Science
+            </h3>
+
+            <p>
+                Explore • Discover
+            </p>
+
+        </div>
+
+
+        <div class="subject-card"
+            onclick="selectSubject('English')">
+
+            <div>📖</div>
+
+            <h3>
+                English
+            </h3>
+
+            <p>
+                Read • Learn • Play
+            </p>
+
+        </div>
+
+
+        <div class="subject-card"
+            onclick="selectSubject('Social Science')">
+
+            <div>🌍</div>
+
+            <h3>
+                Social Science
+            </h3>
+
+            <p>
+                Know the World
+            </p>
+
+        </div>
+
+
+        <div class="subject-card"
+            onclick="selectSubject('General Knowledge')">
+
+            <div>🧠</div>
+
+            <h3>
+                General Knowledge
+            </h3>
+
+            <p>
+                Test Your Brain
+            </p>
+
+        </div>
+
+
+        <div class="subject-card"
+            onclick="selectSubject('Mixed Challenge')">
+
+            <div>🔥</div>
+
+            <h3>
+                Mixed Challenge
+            </h3>
+
+            <p>
+                Everything Together
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <p class="class-footer">
+        RYNEX ZONE 🎮 • Created by Rajdeep ✨
+    </p>
+
+</section>
+
+
+<!-- =====================================
+     06. GAME SELECTION
+====================================== -->
+
+<section id="gameScreen"
+    class="game-screen">
+
+    <div class="game-header">
+
+        <div class="small-logo">
+            🎮
+        </div>
+
+        <h2>
+            CHOOSE YOUR GAME
+        </h2>
+
+        <p id="gameInfo">
+            Ready for your challenge?
+        </p>
+
+    </div>
+
+
+    <div class="game-grid">
+
+        <div class="game-card"
+            onclick="startQuizBattle()">
+
+            <div class="game-icon">
+                🧠
+            </div>
+
+            <span class="game-number">
+                GAME 01
+            </span>
+
+            <h3>
+                Quiz Battle
+            </h3>
+
+            <p>
+                Answer questions
+                and earn points.
+            </p>
+
+            <button type="button">
+                PLAY NOW ⚡
+            </button>
+
+        </div>
+
+
+        <div class="game-card"
+            onclick="startSpeedAnswer()">
+
+            <div class="game-icon">
+                ⚡
+            </div>
+
+            <span class="game-number">
+                GAME 02
+            </span>
+
+            <h3>
+                Speed Answer
+            </h3>
+
+            <p>
+                Think fast before
+                the timer ends!
+            </p>
+
+            <button type="button">
+                PLAY NOW ⚡
+            </button>
+
+        </div>
+
+
+        <div class="game-card"
+            onclick="startMemoryMatch()">
+
+            <div class="game-icon">
+                🧩
+            </div>
+
+            <span class="game-number">
+                GAME 03
+            </span>
+
+            <h3>
+                Memory Match
+            </h3>
+
+            <p>
+                Test your memory
+                and concentration.
+            </p>
+
+            <button type="button">
+                PLAY NOW ⚡
+            </button>
+
+        </div>
+
+
+        <div class="game-card"
+            onclick="startMathRush()">
+
+            <div class="game-icon">
+                🔢
+            </div>
+
+            <span class="game-number">
+                GAME 04
+            </span>
+
+            <h3>
+                Math Rush
+            </h3>
+
+            <p>
+                Solve problems
+                as quickly as possible.
+            </p>
+
+            <button type="button">
+                PLAY NOW ⚡
+            </button>
+
+        </div>
+
+
+        <div class="game-card"
+            onclick="startBossChallenge()">
+
+            <div class="game-icon">
+                👑
+            </div>
+
+            <span class="game-number">
+                GAME 05
+            </span>
+
+            <h3>
+                Boss Challenge
+            </h3>
+
+            <p>
+                Face the ultimate
+                knowledge challenge.
+            </p>
+
+            <button type="button">
+                PLAY NOW ⚡
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <p class="class-footer">
+        RYNEX ZONE 🎮 • Created by Rajdeep ✨
+    </p>
+
+</section>
+
+
+<!-- =====================================
+     07. QUIZ BATTLE
+====================================== -->
+
+<section id="quizScreen"
+    class="quiz-screen">
+
+    <div class="quiz-top">
+
+        <span id="quizQuestionNumber">
+            QUESTION 1 / 5
+        </span>
+
+        <span id="quizScore">
+            SCORE: 0
+        </span>
+
+    </div>
+
+
+    <div class="quiz-progress">
+
+        <div id="quizProgressBar"></div>
+
+    </div>
+
+
+    <div class="quiz-box">
+
+        <div class="quiz-icon">
+            🧠
+        </div>
+
+        <h2 id="questionText">
+            Question will appear here
+        </h2>
+
+        <div id="answerContainer"
+            class="answer-container">
+        </div>
+
+        <button
+            id="nextQuestionBtn"
+            class="next-question-btn"
+            onclick="nextQuestion()"
+            type="button"
+            style="display:none;">
+
+            NEXT QUESTION ➜
+
+        </button>
+
+    </div>
+
+
+    <p class="quiz-footer">
+        RYNEX ZONE 🎮 • Created by Rajdeep ✨
+    </p>
+
+</section>
+
+
+<!-- =====================================
+     08. SPEED ANSWER
+====================================== -->
+
+<section id="speedScreen"
+    class="speed-screen">
+
+    <div class="speed-top">
+
+        <span id="speedQuestionNumber">
+            QUESTION 1 / 5
+        </span>
+
+        <span id="speedScore">
+            SCORE: 0
+        </span>
+
+    </div>
+
+
+    <div class="speed-timer-box">
+
+        <div id="speedTimer">
+            ⏱️ 10
+        </div>
+
+        <p>
+            ANSWER FAST! ⚡
+        </p>
+
+    </div>
+
+
+    <div class="speed-progress">
+
+        <div id="speedProgressBar"></div>
+
+    </div>
+
+
+    <div class="speed-box">
+
+        <div class="speed-icon">
+            ⚡
+        </div>
+
+        <h2 id="speedQuestion">
+            Question will appear here
+        </h2>
+
+        <div id="speedAnswerContainer"
+            class="speed-answer-container">
+        </div>
+
+        <button
+            id="speedNextButton"
+            class="next-question-btn"
+            onclick="nextSpeedQuestion()"
+            type="button"
+            style="display:none;">
+
+            NEXT QUESTION ➜
+
+        </button>
+
+    </div>
+
+
+    <p class="quiz-footer">
+        RYNEX ZONE 🎮 • Created by Rajdeep ✨
+    </p>
+
+</section>
+
+
+<!-- =====================================
+     09. RESULT SCREEN
+====================================== -->
+
+<section id="resultScreen"
+    class="result-screen">
+
+    <div class="winner-confetti">
+        🎉 ✨ 🎊 ✨ 🎉
+    </div>
+
+    <div class="winner-crown">
+        👑
+    </div>
+
+    <h2 class="congrats-title">
+        CONGRATULATIONS!
+    </h2>
+
+    <h1 class="you-won">
+        YOU WON!
+    </h1>
+
+    <p class="champion-text">
+        🏆 YOU ARE THE CHAMPION 🏆
+    </p>
+
+    <div class="trophy-animation">
+        🏆
+    </div>
+
+    <div class="final-score">
+
+        <span>
+            YOUR SCORE
+        </span>
+
+        <strong id="finalScore">
+            0 / 5
+        </strong>
+
+    </div>
+
+    <p id="resultMessage"
+        class="result-message">
+
+        Amazing performance! 🔥
+
+    </p>
+
+    <div class="winner-buttons">
+
+        <button
+            class="play-again-btn"
+            onclick="restartQuiz()"
+            type="button">
+
+            🔄 PLAY AGAIN
+
+        </button>
+
+        <button
+            class="back-game-btn"
+            onclick="backToGames()"
+            type="button">
+
+            🎮 BACK TO GAMES
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     10. JAVASCRIPT
+====================================== -->
+
+<script src="script.js"></script>
+
+</body>
+
+  </html>
